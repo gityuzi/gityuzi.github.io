@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/08/blog-setup/index.html">
 <meta property="og:site_name" content="gityuzi">
 <meta property="og:description" content="刚开始学习前段的时候就想着要搭建一个自己的博客，但是一直拖着没有实现。但是学习的过程中愈发觉得总结的重要性，很多东西，学了一遍并没有用，要总结反思。加之最近我哥的提醒，便开始学习个人博客的搭建。一开始我哥提的是jrkyll，但是我之前有看到推荐hexo的比较多，便想着先用hexo搭建。  工具选择Github首先，github是必须的，既方便快捷，而且还免费，而且还能巩固git的学习。 hexo">
-<meta property="og:updated_time" content="2017-04-08T03:04:30.165Z">
+<meta property="og:updated_time" content="2017-04-08T03:32:00.297Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于github和hexo搭建个人博客">
 <meta name="twitter:description" content="刚开始学习前段的时候就想着要搭建一个自己的博客，但是一直拖着没有实现。但是学习的过程中愈发觉得总结的重要性，很多东西，学了一遍并没有用，要总结反思。加之最近我哥的提醒，便开始学习个人博客的搭建。一开始我哥提的是jrkyll，但是我之前有看到推荐hexo的比较多，便想着先用hexo搭建。  工具选择Github首先，github是必须的，既方便快捷，而且还免费，而且还能巩固git的学习。 hexo">
@@ -388,10 +388,22 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next.git</div></pre></td></tr></table></figure>
 <p>对hexo-theme-next下的_config-yml进行修改。<br>返回zc，修改_config-yml中的theme为hexo-theme-next。<br>预览。</p>
 </li>
-<li><h4 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h4><p>对zc文件下的_config-yml进行修改，最后添加最后，<br>deploy:<br>type： git；<br>repo： github.com/gityuzi/zc.git<br>branch： master</p>
+<li><h4 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h4><p>github new repo：zc<br>对zc文件下的_config-yml进行修改，最后添加最后，<br>deploy:<br>type： git；<br>repo： github.com/gityuzi/zc.git<br>branch： master</p>
 </li>
-<li><p>#### </p>
+<li><h4 id="上传hexo"><a href="#上传hexo" class="headerlink" title="上传hexo"></a>上传hexo</h4><p>安装deploy</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>以后添加文章以后也是这样的步骤</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
 </li>
+<li><h4 id="修改GitHub端setting"><a href="#修改GitHub端setting" class="headerlink" title="修改GitHub端setting"></a>修改GitHub端setting</h4><p>找到zc-setting，GitHub pages。切换到master，然后save。<br>会得到一个网址：<a href="https://gityuzi/github.io/zc/" target="_blank" rel="external">https://gityuzi/github.io/zc/</a><br>打开即可看到搭建好的博客地址。</p>
+</li>
+<li><h4 id="添加文章"><a href="#添加文章" class="headerlink" title="添加文章"></a>添加文章</h4><p>用markdown写好文章到，添加到zc-source-_ source下，执行deploy步骤即可。</p>
+</li>
+</ol>
+<h3 id="小tips"><a href="#小tips" class="headerlink" title="小tips"></a>小tips</h3><ol>
+<li>网上很多文章说新建repo一定要是username.github.io，其实不用，项目的GitHub pages也可以用的。</li>
+<li>GitHub pages生成的网页需要等待一会才会显示，不用着急。</li>
+<li>还有添加分类，标签等博客内容的等下一次再说。</li>
 </ol>
 
       
@@ -574,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#工具选择"><span class="nav-number">1.</span> <span class="nav-text">工具选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Github"><span class="nav-number">1.1.</span> <span class="nav-text">Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo"><span class="nav-number">1.2.</span> <span class="nav-text">hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始搭建"><span class="nav-number">2.</span> <span class="nav-text">开始搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建blog环境"><span class="nav-number">2.0.2.</span> <span class="nav-text">建blog环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#预览博客"><span class="nav-number">2.0.3.</span> <span class="nav-text">预览博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置信息"><span class="nav-number">2.0.4.</span> <span class="nav-text">配置信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再次预览，是否成功"><span class="nav-number">2.0.5.</span> <span class="nav-text">再次预览，是否成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装主题"><span class="nav-number">2.0.6.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连接github"><span class="nav-number">2.0.7.</span> <span class="nav-text">连接github</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#工具选择"><span class="nav-number">1.</span> <span class="nav-text">工具选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Github"><span class="nav-number">1.1.</span> <span class="nav-text">Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo"><span class="nav-number">1.2.</span> <span class="nav-text">hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始搭建"><span class="nav-number">2.</span> <span class="nav-text">开始搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建blog环境"><span class="nav-number">2.0.2.</span> <span class="nav-text">建blog环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#预览博客"><span class="nav-number">2.0.3.</span> <span class="nav-text">预览博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置信息"><span class="nav-number">2.0.4.</span> <span class="nav-text">配置信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再次预览，是否成功"><span class="nav-number">2.0.5.</span> <span class="nav-text">再次预览，是否成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装主题"><span class="nav-number">2.0.6.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连接github"><span class="nav-number">2.0.7.</span> <span class="nav-text">连接github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上传hexo"><span class="nav-number">2.0.8.</span> <span class="nav-text">上传hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改GitHub端setting"><span class="nav-number">2.0.9.</span> <span class="nav-text">修改GitHub端setting</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加文章"><span class="nav-number">2.0.10.</span> <span class="nav-text">添加文章</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小tips"><span class="nav-number">2.1.</span> <span class="nav-text">小tips</span></a></li></ol></li></ol></div>
             
 
           </div>

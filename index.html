@@ -393,10 +393,22 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next.git</div></pre></td></tr></table></figure>
 <p>对hexo-theme-next下的_config-yml进行修改。<br>返回zc，修改_config-yml中的theme为hexo-theme-next。<br>预览。</p>
 </li>
-<li><h4 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h4><p>对zc文件下的_config-yml进行修改，最后添加最后，<br>deploy:<br>type： git；<br>repo： github.com/gityuzi/zc.git<br>branch： master</p>
+<li><h4 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h4><p>github new repo：zc<br>对zc文件下的_config-yml进行修改，最后添加最后，<br>deploy:<br>type： git；<br>repo： github.com/gityuzi/zc.git<br>branch： master</p>
 </li>
-<li><p>#### </p>
+<li><h4 id="上传hexo"><a href="#上传hexo" class="headerlink" title="上传hexo"></a>上传hexo</h4><p>安装deploy</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>以后添加文章以后也是这样的步骤</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
 </li>
+<li><h4 id="修改GitHub端setting"><a href="#修改GitHub端setting" class="headerlink" title="修改GitHub端setting"></a>修改GitHub端setting</h4><p>找到zc-setting，GitHub pages。切换到master，然后save。<br>会得到一个网址：<a href="https://gityuzi/github.io/zc/" target="_blank" rel="external">https://gityuzi/github.io/zc/</a><br>打开即可看到搭建好的博客地址。</p>
+</li>
+<li><h4 id="添加文章"><a href="#添加文章" class="headerlink" title="添加文章"></a>添加文章</h4><p>用markdown写好文章到，添加到zc-source-_ source下，执行deploy步骤即可。</p>
+</li>
+</ol>
+<h3 id="小tips"><a href="#小tips" class="headerlink" title="小tips"></a>小tips</h3><ol>
+<li>网上很多文章说新建repo一定要是username.github.io，其实不用，项目的GitHub pages也可以用的。</li>
+<li>GitHub pages生成的网页需要等待一会才会显示，不用着急。</li>
+<li>还有添加分类，标签等博客内容的等下一次再说。</li>
 </ol>
 
           
