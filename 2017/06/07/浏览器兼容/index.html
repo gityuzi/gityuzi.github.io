@@ -1,0 +1,768 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="日常学习,总结," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/../images/zc.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="简历上总是会说，了解浏览器之间的兼容问题，到底有什么问题呢？虽然现在由于IE9+的淡出，兼容性问题并不像以前那么严重，还是需要了解。  1. 不同浏览器的标签默认的margin和padding不同问题症状：随便写几个标签，不加样式控制的情况下，各自的margin 和padding差异较大。 解决方案：CSS里加 *{margin:0;padding:0;} 备注：几乎所有的CSS文件开头都会用通">
+<meta name="keywords" content="日常学习,总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浏览器兼容常见问题">
+<meta property="og:url" content="http://yoursite.com/2017/06/07/浏览器兼容/index.html">
+<meta property="og:site_name" content="张超的博客">
+<meta property="og:description" content="简历上总是会说，了解浏览器之间的兼容问题，到底有什么问题呢？虽然现在由于IE9+的淡出，兼容性问题并不像以前那么严重，还是需要了解。  1. 不同浏览器的标签默认的margin和padding不同问题症状：随便写几个标签，不加样式控制的情况下，各自的margin 和padding差异较大。 解决方案：CSS里加 *{margin:0;padding:0;} 备注：几乎所有的CSS文件开头都会用通">
+<meta property="og:updated_time" content="2017-06-06T16:55:39.096Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="浏览器兼容常见问题">
+<meta name="twitter:description" content="简历上总是会说，了解浏览器之间的兼容问题，到底有什么问题呢？虽然现在由于IE9+的淡出，兼容性问题并不像以前那么严重，还是需要了解。  1. 不同浏览器的标签默认的margin和padding不同问题症状：随便写几个标签，不加样式控制的情况下，各自的margin 和padding差异较大。 解决方案：CSS里加 *{margin:0;padding:0;} 备注：几乎所有的CSS文件开头都会用通">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/07/浏览器兼容/"/>
+
+
+
+
+
+  <title> 浏览器兼容常见问题 | 张超的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张超的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">不要装死，努力学习</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/07/浏览器兼容/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="gityuzi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/zc.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张超的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                浏览器兼容常见问题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-07T00:32:41+08:00">
+                2017-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/知识点/" itemprop="url" rel="index">
+                    <span itemprop="name">知识点</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/知识点/总体/" itemprop="url" rel="index">
+                    <span itemprop="name">总体</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>简历上总是会说，了解浏览器之间的兼容问题，到底有什么问题呢？虽然现在由于IE9+的淡出，兼容性问题并不像以前那么严重，还是需要了解。</p>
+</blockquote>
+<h3 id="1-不同浏览器的标签默认的margin和padding不同"><a href="#1-不同浏览器的标签默认的margin和padding不同" class="headerlink" title="1. 不同浏览器的标签默认的margin和padding不同"></a>1. 不同浏览器的标签默认的margin和padding不同</h3><p>问题症状：随便写几个标签，不加样式控制的情况下，各自的margin 和padding差异较大。</p>
+<p>解决方案：CSS里加 *{margin:0;padding:0;}</p>
+<p>备注：几乎所有的CSS文件开头都会用通配符*来设置各个标签的内外补丁是0。</p>
+<a id="more"></a>
+<h3 id="2-块属性标签float后，又有横行的margin情况下，在IE6显示margin比设置的大（即双倍边距bug）"><a href="#2-块属性标签float后，又有横行的margin情况下，在IE6显示margin比设置的大（即双倍边距bug）" class="headerlink" title="2. 块属性标签float后，又有横行的margin情况下，在IE6显示margin比设置的大（即双倍边距bug）"></a>2. 块属性标签float后，又有横行的margin情况下，在IE6显示margin比设置的大（即双倍边距bug）</h3><p>问题症状：常见症状是IE6中后面的一块被顶到下一行</p>
+<p>解决方案：在float的标签样式控制中加入 display:inline;将其转化为行内属性</p>
+<h3 id="3-设置较小高度标签（一般小于10px），在IE6，IE7，遨游中高度超出自己设置高度"><a href="#3-设置较小高度标签（一般小于10px），在IE6，IE7，遨游中高度超出自己设置高度" class="headerlink" title="3. 设置较小高度标签（一般小于10px），在IE6，IE7，遨游中高度超出自己设置高度"></a>3. 设置较小高度标签（一般小于10px），在IE6，IE7，遨游中高度超出自己设置高度</h3><p>问题症状：IE6、7和遨游里这个标签的高度不受控制，超出自己设置的高度</p>
+<p>解决方案：给超出高度的标签设置overflow:hidden;或者设置行高line-height 小于你设置的高度。</p>
+<p>备注：这种情况一般出现在我们设置小圆角背景的标签里。出现这个问题的原因是IE8之前的浏览器都会给标签一个最小默认的行高的高度。即使你的标签是空的，这个标签的高度还是会达到默认的行高。</p>
+<h3 id="4-行内属性标签，设置display-block后采用float布局，又有横行的margin的情况，IE6间距bug"><a href="#4-行内属性标签，设置display-block后采用float布局，又有横行的margin的情况，IE6间距bug" class="headerlink" title="4. 行内属性标签，设置display:block后采用float布局，又有横行的margin的情况，IE6间距bug"></a>4. 行内属性标签，设置display:block后采用float布局，又有横行的margin的情况，IE6间距bug</h3><p>问题症状：IE6里的间距比超过设置的间距</p>
+<p>解决方案：在display:block;后面加入display:inline;display:table;</p>
+<p>备注：行内属性标签，为了设置宽高，我们需要设置display:block;(除了input标签比较特殊)。在用float布局并有横向的margin后，在IE6下，他就具有了块属性float后的横向margin的bug。不过因为它本身就是行内属性标签，所以我们再加上display:inline的话，它的高宽就不可设了。这时候我们还需要在display:inline后面加入display:table。</p>
+<h3 id="5-图片默认有间距"><a href="#5-图片默认有间距" class="headerlink" title="5. 图片默认有间距"></a>5. 图片默认有间距</h3><p>问题症状：几个img标签放在一起的时候，有些浏览器会有默认的间距，加了问题一中提到的通配符也不起作用。</p>
+<p>解决方案：使用float属性为img布局</p>
+<p>备注：因为img标签是行内属性标签，所以只要不超出容器宽度，img标签都会排在一行里，但是部分浏览器的img标签之间会有个间距。使用float是正道。</p>
+<h3 id="6-标签最低高度设置min-height不兼容"><a href="#6-标签最低高度设置min-height不兼容" class="headerlink" title="6. 标签最低高度设置min-height不兼容"></a>6. 标签最低高度设置min-height不兼容</h3><p>问题症状：因为min-height本身就是一个不兼容的CSS属性，所以设置min-height时不能很好的被各个浏览器兼容</p>
+<p>解决方案：如果我们要设置一个标签的最小高度200px，需要进行的设置为：{min-height:200px; height:auto !important; height:200px; overflow:visible;}</p>
+<p>备注：在B/S系统前端开时，有很多情况下我们又这种需求。当内容小于一个值（如300px）时。容器的高度为300px；当内容高度大于这个值时，容器高度被撑高，而不是出现滚动条。这时候我们就会面临这个兼容性问题。</p>
+<h2 id="附：IE6中的常见BUG与相应的解决办法"><a href="#附：IE6中的常见BUG与相应的解决办法" class="headerlink" title="附：IE6中的常见BUG与相应的解决办法"></a>附：IE6中的常见BUG与相应的解决办法</h2><h3 id="一、IE6双倍边距bug例如“margin-left-10px”-在IE6中，该值就会被解析为20px。"><a href="#一、IE6双倍边距bug例如“margin-left-10px”-在IE6中，该值就会被解析为20px。" class="headerlink" title="一、IE6双倍边距bug例如“margin-left:10px” 在IE6中，该值就会被解析为20px。"></a>一、IE6双倍边距bug例如“margin-left:10px” 在IE6中，该值就会被解析为20px。</h3><p>解决方案：需要在该元素中加入display:inline 或 display:block 明确其元素类型</p>
+<h3 id="二、IE6中3像素问题及解决办法当元素使用float浮动后，元素与相邻的元素之间会产生3px的间隙。诡异的是如果右侧的容器没设置高度时3px的间隙在相邻容器的内部，当设定高度后又跑到容器的相反侧了。"><a href="#二、IE6中3像素问题及解决办法当元素使用float浮动后，元素与相邻的元素之间会产生3px的间隙。诡异的是如果右侧的容器没设置高度时3px的间隙在相邻容器的内部，当设定高度后又跑到容器的相反侧了。" class="headerlink" title="二、IE6中3像素问题及解决办法当元素使用float浮动后，元素与相邻的元素之间会产生3px的间隙。诡异的是如果右侧的容器没设置高度时3px的间隙在相邻容器的内部，当设定高度后又跑到容器的相反侧了。"></a>二、IE6中3像素问题及解决办法当元素使用float浮动后，元素与相邻的元素之间会产生3px的间隙。诡异的是如果右侧的容器没设置高度时3px的间隙在相邻容器的内部，当设定高度后又跑到容器的相反侧了。</h3><p>解决方案：需要使布局在同一行的元素都加上float浮动。</p>
+<h3 id="三、IE6中奇数宽高的BUGIE6中奇数的高宽显示大小与偶数高宽显示大小存在一定的不同。其中要问题是出在奇数高宽上。"><a href="#三、IE6中奇数宽高的BUGIE6中奇数的高宽显示大小与偶数高宽显示大小存在一定的不同。其中要问题是出在奇数高宽上。" class="headerlink" title="三、IE6中奇数宽高的BUGIE6中奇数的高宽显示大小与偶数高宽显示大小存在一定的不同。其中要问题是出在奇数高宽上。"></a>三、IE6中奇数宽高的BUGIE6中奇数的高宽显示大小与偶数高宽显示大小存在一定的不同。其中要问题是出在奇数高宽上。</h3><p>解决方案：需要尽量将外部定位的div高宽写成偶数即可。</p>
+<h3 id="四、IE6中图片链接的下方有间隙IE6中图片的下方会存在一定的间隙，尤其在图片垂直挨着图片的时候，即可看到这样的间隙。"><a href="#四、IE6中图片链接的下方有间隙IE6中图片的下方会存在一定的间隙，尤其在图片垂直挨着图片的时候，即可看到这样的间隙。" class="headerlink" title="四、IE6中图片链接的下方有间隙IE6中图片的下方会存在一定的间隙，尤其在图片垂直挨着图片的时候，即可看到这样的间隙。"></a>四、IE6中图片链接的下方有间隙IE6中图片的下方会存在一定的间隙，尤其在图片垂直挨着图片的时候，即可看到这样的间隙。</h3><p>解决方案：需要将img标签定义为display:block 或定义vertical-align对应的属性。也可以为img对应的样式写入font-size:0</p>
+<h3 id="五、IE6下空元素的高度BUG如果一个元素中没有任何内容，当在样式中为这个元素设置了0-19px之间的高度时。此元素的高度始终为19px。"><a href="#五、IE6下空元素的高度BUG如果一个元素中没有任何内容，当在样式中为这个元素设置了0-19px之间的高度时。此元素的高度始终为19px。" class="headerlink" title="五、IE6下空元素的高度BUG如果一个元素中没有任何内容，当在样式中为这个元素设置了0-19px之间的高度时。此元素的高度始终为19px。"></a>五、IE6下空元素的高度BUG如果一个元素中没有任何内容，当在样式中为这个元素设置了0-19px之间的高度时。此元素的高度始终为19px。</h3><p>解决的方法如下:1.在元素的css中加入：overflow:hidden2.在元素中插入html注释：&lt;!– &gt;3.在元素中插入html的空白符：&nbsp;4.在元素的css中加入：font-size:0</p>
+<h3 id="六、重复文字的BUG在某些比较复杂的排版中，有时候浮动元素的最后一些字符会出现在clear清除元素的下面。"><a href="#六、重复文字的BUG在某些比较复杂的排版中，有时候浮动元素的最后一些字符会出现在clear清除元素的下面。" class="headerlink" title="六、重复文字的BUG在某些比较复杂的排版中，有时候浮动元素的最后一些字符会出现在clear清除元素的下面。"></a>六、重复文字的BUG在某些比较复杂的排版中，有时候浮动元素的最后一些字符会出现在clear清除元素的下面。</h3><p>解决方法如下：1.确保元素都带有display:inline2.在最后一个元素上使用“margin-right:-3px3.为浮动元素的最后一个条目加上条件注释，&lt;!–[if !IE]&gt;xxx&lt;![endif]–&gt;4.在容器的最后元素使用一个空白的div，为这个div指定不超过容器的宽度。</p>
+<h3 id="七、IE6中-z-index失效具体BUG为，元素的父级元素设置的z-index为1，那么其子级元素再设置z-index时会失效，其层级会继承父级元素的设置，造成某些层级调整上的BUG原因：z-index起作用有个小小前提，就是元素的position属性要-是relative，absolute或是fixed。"><a href="#七、IE6中-z-index失效具体BUG为，元素的父级元素设置的z-index为1，那么其子级元素再设置z-index时会失效，其层级会继承父级元素的设置，造成某些层级调整上的BUG原因：z-index起作用有个小小前提，就是元素的position属性要-是relative，absolute或是fixed。" class="headerlink" title="七、IE6中 z-index失效具体BUG为，元素的父级元素设置的z-index为1，那么其子级元素再设置z-index时会失效，其层级会继承父级元素的设置，造成某些层级调整上的BUG原因：z-index起作用有个小小前提，就是元素的position属性要 是relative，absolute或是fixed。"></a>七、IE6中 z-index失效具体BUG为，元素的父级元素设置的z-index为1，那么其子级元素再设置z-index时会失效，其层级会继承父级元素的设置，造成某些层级调整上的BUG原因：z-index起作用有个小小前提，就是元素的position属性要 是relative，absolute或是fixed。</h3><p>解决方案：1.position:relative改为position:absolute；2.去除浮动；3.浮动元素添加position属性（如relative，absolute等）。</p>
+<p><strong>IE6结语：实际上中，很多BUG的解决方法都可以使用display:inline、font-size:0、float解决。因此我们在书写代码时要记住，一旦使用了float浮动，就为元素增加一个display:inline样式，可以有效的避免浮动造成的样式错乱问题。使用空DIV时，为了避免其高度影响布局美观，也可以为其加上font-size:0 这样就很容易避免一些兼容上的问题。</strong></p>
+<h3 id="子元素不会继承透明效果css-opacity-background-color-000000-filter-alpha-opacity-50-background-color-rgba-0-0-0-0-5"><a href="#子元素不会继承透明效果css-opacity-background-color-000000-filter-alpha-opacity-50-background-color-rgba-0-0-0-0-5" class="headerlink" title="子元素不会继承透明效果css.opacity{    background-color: #000000;    filter: alpha(opacity=50);    background-color: rgba(0, 0, 0, 0.5);}"></a>子元素不会继承透明效果<code>css.opacity{    background-color: #000000;    filter: alpha(opacity=50);    background-color: rgba(0, 0, 0, 0.5);}</code></h3><h3 id="避免使用负的margin和padding"><a href="#避免使用负的margin和padding" class="headerlink" title="避免使用负的margin和padding"></a>避免使用负的margin和padding</h3>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/日常学习/" rel="tag"># 日常学习</a>
+          
+            <a href="/tags/总结/" rel="tag"># 总结</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/02/垂直居中/" rel="prev" title="css 垂直居中">
+                css 垂直居中 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/zc.jpg"
+               alt="gityuzi" />
+          <p class="site-author-name" itemprop="name">gityuzi</p>
+           
+              <p class="site-description motion-element" itemprop="description">总结学习才快！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-不同浏览器的标签默认的margin和padding不同"><span class="nav-number">1.</span> <span class="nav-text">1. 不同浏览器的标签默认的margin和padding不同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-块属性标签float后，又有横行的margin情况下，在IE6显示margin比设置的大（即双倍边距bug）"><span class="nav-number">2.</span> <span class="nav-text">2. 块属性标签float后，又有横行的margin情况下，在IE6显示margin比设置的大（即双倍边距bug）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-设置较小高度标签（一般小于10px），在IE6，IE7，遨游中高度超出自己设置高度"><span class="nav-number">3.</span> <span class="nav-text">3. 设置较小高度标签（一般小于10px），在IE6，IE7，遨游中高度超出自己设置高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-行内属性标签，设置display-block后采用float布局，又有横行的margin的情况，IE6间距bug"><span class="nav-number">4.</span> <span class="nav-text">4. 行内属性标签，设置display:block后采用float布局，又有横行的margin的情况，IE6间距bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-图片默认有间距"><span class="nav-number">5.</span> <span class="nav-text">5. 图片默认有间距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-标签最低高度设置min-height不兼容"><span class="nav-number">6.</span> <span class="nav-text">6. 标签最低高度设置min-height不兼容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附：IE6中的常见BUG与相应的解决办法"><span class="nav-number"></span> <span class="nav-text">附：IE6中的常见BUG与相应的解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、IE6双倍边距bug例如“margin-left-10px”-在IE6中，该值就会被解析为20px。"><span class="nav-number">1.</span> <span class="nav-text">一、IE6双倍边距bug例如“margin-left:10px” 在IE6中，该值就会被解析为20px。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、IE6中3像素问题及解决办法当元素使用float浮动后，元素与相邻的元素之间会产生3px的间隙。诡异的是如果右侧的容器没设置高度时3px的间隙在相邻容器的内部，当设定高度后又跑到容器的相反侧了。"><span class="nav-number">2.</span> <span class="nav-text">二、IE6中3像素问题及解决办法当元素使用float浮动后，元素与相邻的元素之间会产生3px的间隙。诡异的是如果右侧的容器没设置高度时3px的间隙在相邻容器的内部，当设定高度后又跑到容器的相反侧了。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、IE6中奇数宽高的BUGIE6中奇数的高宽显示大小与偶数高宽显示大小存在一定的不同。其中要问题是出在奇数高宽上。"><span class="nav-number">3.</span> <span class="nav-text">三、IE6中奇数宽高的BUGIE6中奇数的高宽显示大小与偶数高宽显示大小存在一定的不同。其中要问题是出在奇数高宽上。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、IE6中图片链接的下方有间隙IE6中图片的下方会存在一定的间隙，尤其在图片垂直挨着图片的时候，即可看到这样的间隙。"><span class="nav-number">4.</span> <span class="nav-text">四、IE6中图片链接的下方有间隙IE6中图片的下方会存在一定的间隙，尤其在图片垂直挨着图片的时候，即可看到这样的间隙。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、IE6下空元素的高度BUG如果一个元素中没有任何内容，当在样式中为这个元素设置了0-19px之间的高度时。此元素的高度始终为19px。"><span class="nav-number">5.</span> <span class="nav-text">五、IE6下空元素的高度BUG如果一个元素中没有任何内容，当在样式中为这个元素设置了0-19px之间的高度时。此元素的高度始终为19px。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、重复文字的BUG在某些比较复杂的排版中，有时候浮动元素的最后一些字符会出现在clear清除元素的下面。"><span class="nav-number">6.</span> <span class="nav-text">六、重复文字的BUG在某些比较复杂的排版中，有时候浮动元素的最后一些字符会出现在clear清除元素的下面。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七、IE6中-z-index失效具体BUG为，元素的父级元素设置的z-index为1，那么其子级元素再设置z-index时会失效，其层级会继承父级元素的设置，造成某些层级调整上的BUG原因：z-index起作用有个小小前提，就是元素的position属性要-是relative，absolute或是fixed。"><span class="nav-number">7.</span> <span class="nav-text">七、IE6中 z-index失效具体BUG为，元素的父级元素设置的z-index为1，那么其子级元素再设置z-index时会失效，其层级会继承父级元素的设置，造成某些层级调整上的BUG原因：z-index起作用有个小小前提，就是元素的position属性要 是relative，absolute或是fixed。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子元素不会继承透明效果css-opacity-background-color-000000-filter-alpha-opacity-50-background-color-rgba-0-0-0-0-5"><span class="nav-number">8.</span> <span class="nav-text">子元素不会继承透明效果css.opacity{    background-color: #000000;    filter: alpha(opacity=50);    background-color: rgba(0, 0, 0, 0.5);}</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#避免使用负的margin和padding"><span class="nav-number">9.</span> <span class="nav-text">避免使用负的margin和padding</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gityuzi</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
