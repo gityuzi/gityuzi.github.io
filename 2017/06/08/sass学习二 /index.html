@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="实用,兴趣," />
+  <meta name="keywords" content="日常学习,sass," />
 
 
 
@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="刚开始学习前段的时候就想着要搭建一个自己的博客，但是一直拖着没有实现。但是学习的过程中愈发觉得总结的重要性，很多东西，学了一遍并没有用，要总结反思。加之最近我哥的提醒，便开始学习个人博客的搭建。一开始我哥提的是jekyll，但是我之前有看到推荐hexo的比较多，便想着先用hexo搭建。">
-<meta name="keywords" content="实用,兴趣">
+<meta name="description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  一. 基本特性1 变量">
+<meta name="keywords" content="日常学习,sass">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于github和hexo搭建个人博客">
-<meta property="og:url" content="http://yoursite.com/2017/04/08/基于github和hexo搭建个人博客/index.html">
+<meta property="og:title" content="sass学习二">
+<meta property="og:url" content="http://yoursite.com/2017/06/08/sass学习二 /index.html">
 <meta property="og:site_name" content="张超的博客">
-<meta property="og:description" content="刚开始学习前段的时候就想着要搭建一个自己的博客，但是一直拖着没有实现。但是学习的过程中愈发觉得总结的重要性，很多东西，学了一遍并没有用，要总结反思。加之最近我哥的提醒，便开始学习个人博客的搭建。一开始我哥提的是jekyll，但是我之前有看到推荐hexo的比较多，便想着先用hexo搭建。">
-<meta property="og:updated_time" content="2017-04-08T03:55:56.411Z">
+<meta property="og:description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  一. 基本特性1 变量">
+<meta property="og:updated_time" content="2017-06-07T18:17:48.163Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于github和hexo搭建个人博客">
-<meta name="twitter:description" content="刚开始学习前段的时候就想着要搭建一个自己的博客，但是一直拖着没有实现。但是学习的过程中愈发觉得总结的重要性，很多东西，学了一遍并没有用，要总结反思。加之最近我哥的提醒，便开始学习个人博客的搭建。一开始我哥提的是jekyll，但是我之前有看到推荐hexo的比较多，便想着先用hexo搭建。">
+<meta name="twitter:title" content="sass学习二">
+<meta name="twitter:description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  一. 基本特性1 变量">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/08/基于github和hexo搭建个人博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/08/sass学习二 /"/>
 
 
 
 
 
-  <title> 基于github和hexo搭建个人博客 | 张超的博客 </title>
+  <title> sass学习二 | 张超的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +270,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/08/基于github和hexo搭建个人博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/08/sass学习二 /">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gityuzi">
@@ -291,7 +291,7 @@
             
             
               
-                基于github和hexo搭建个人博客
+                sass学习二
               
             
           </h1>
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-08T01:15:36+08:00">
-                2017-04-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-08T02:05:18+08:00">
+                2017-06-08
               </time>
             
 
@@ -329,8 +329,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/github/" itemprop="url" rel="index">
-                    <span itemprop="name">github</span>
+                  <a href="/categories/知识点/" itemprop="url" rel="index">
+                    <span itemprop="name">知识点</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/知识点/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -365,48 +376,10 @@
 
       
         <blockquote>
-<p>刚开始学习前段的时候就想着要搭建一个自己的博客，但是一直拖着没有实现。但是学习的过程中愈发觉得总结的重要性，很多东西，学了一遍并没有用，要总结反思。加之最近我哥的提醒，便开始学习个人博客的搭建。一开始我哥提的是jekyll，但是我之前有看到推荐hexo的比较多，便想着先用hexo搭建。</p>
+<p>一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。</p>
 </blockquote>
-<a id="more"></a>
-<h2 id="工具选择"><a href="#工具选择" class="headerlink" title="工具选择"></a>工具选择</h2><h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><pre><code>首先，github是必须的，既方便快捷，而且还免费，而且还能巩固git的学习。
-</code></pre><h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><pre><code>界面简洁，静态网站，加载迅速等优点，缺点是如果不同电脑终端的话，需要都配置一遍，比较麻烦。
-</code></pre><h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><ol>
-<li><h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli-g</div></pre></td></tr></table></figure>
-</li>
-<li><h4 id="建blog环境"><a href="#建blog环境" class="headerlink" title="建blog环境"></a>建blog环境</h4><p>打开资源管理器，定位到放项目的目标位置。git bash here</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init zzzzc-blog</div></pre></td></tr></table></figure>
-<p>在目标位置，新建一个zzzzc-blog的目标文件夹。</p>
-</li>
-<li><h4 id="预览博客"><a href="#预览博客" class="headerlink" title="预览博客"></a>预览博客</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> zzzzc-blog</div><div class="line">hexo serve</div></pre></td></tr></table></figure>
-<p>这时候打开浏览器，输入localhost：4000；就能看到搭好的博客界面。</p>
-</li>
-<li><h4 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h4><p>找到zzzzc-blog下的_config-yml文件，打开编辑。<br>按照提示更改，作者，标题等基础信息。</p>
-</li>
-<li><h4 id="再次预览，是否成功"><a href="#再次预览，是否成功" class="headerlink" title="再次预览，是否成功"></a>再次预览，是否成功</h4></li>
-<li><h4 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h4><p>进入zzzzc-blog下的themes文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> themes</div></pre></td></tr></table></figure>
-<p>网上选择喜欢的主题，这里选择GitHub上star比较多的一个主题。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next.git</div></pre></td></tr></table></figure>
-<p>对hexo-theme-next下的_config-yml进行修改。<br>返回zc，修改_config-yml中的theme为hexo-theme-next。<br>预览。</p>
-</li>
-<li><h4 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h4><p>github new repo：zc<br>对zc文件下的_config-yml进行修改，最后添加最后，<br>deploy:<br>type： git；<br>repo： github.com/gityuzi/zc.git<br>branch： master</p>
-</li>
-<li><h4 id="上传hexo"><a href="#上传hexo" class="headerlink" title="上传hexo"></a>上传hexo</h4><p>安装deploy</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>以后添加文章以后也是这样的步骤</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
-</li>
-<li><h4 id="修改GitHub端setting"><a href="#修改GitHub端setting" class="headerlink" title="修改GitHub端setting"></a>修改GitHub端setting</h4><p>找到zc-setting，GitHub pages。切换到master，然后save。<br>会得到一个网址：<a href="https://gityuzi/github.io/zc/" target="_blank" rel="external">https://gityuzi/github.io/zc/</a><br>打开即可看到搭建好的博客地址。</p>
-</li>
-<li><h4 id="添加文章"><a href="#添加文章" class="headerlink" title="添加文章"></a>添加文章</h4><p>用markdown写好文章到，添加到zc-source-_ source下，执行deploy步骤即可。</p>
-</li>
-</ol>
-<h3 id="小tips"><a href="#小tips" class="headerlink" title="小tips"></a>小tips</h3><ol>
-<li>网上很多文章说新建repo一定要是username.github.io，其实不用，项目的GitHub pages也可以用的。</li>
-<li>GitHub pages生成的网页需要等待一会才会显示，不用着急。</li>
-<li>还有添加分类，标签等博客内容的等下一次再说。</li>
-</ol>
-
+<h2 id="一-基本特性"><a href="#一-基本特性" class="headerlink" title="一. 基本特性"></a>一. 基本特性</h2><h3 id="1-变量"><a href="#1-变量" class="headerlink" title="1 变量"></a>1 变量</h3><a id="more"></a>
+<h4 id="1-1-普通变量和默认变狼"><a href="#1-1-普通变量和默认变狼" class="headerlink" title="1.1 普通变量和默认变狼"></a>1.1 普通变量和默认变狼</h4><h4 id="1-2-变量调用"><a href="#1-2-变量调用" class="headerlink" title="1.2 变量调用"></a>1.2 变量调用</h4><h4 id="1-3-全局和局部变量"><a href="#1-3-全局和局部变量" class="headerlink" title="1.3 全局和局部变量"></a>1.3 全局和局部变量</h4><h3 id="2-嵌套"><a href="#2-嵌套" class="headerlink" title="2. 嵌套"></a>2. 嵌套</h3><h4 id="2-1-选择器嵌套"><a href="#2-1-选择器嵌套" class="headerlink" title="2.1 选择器嵌套"></a>2.1 选择器嵌套</h4><h4 id="2-2-属性嵌套"><a href="#2-2-属性嵌套" class="headerlink" title="2.2 属性嵌套"></a>2.2 属性嵌套</h4><h4 id="2-3-伪类嵌套"><a href="#2-3-伪类嵌套" class="headerlink" title="2.3 伪类嵌套"></a>2.3 伪类嵌套</h4><h3 id="3-混合宏"><a href="#3-混合宏" class="headerlink" title="3. 混合宏"></a>3. 混合宏</h3><h4 id="3-1-调用混合宏"><a href="#3-1-调用混合宏" class="headerlink" title="3.1 调用混合宏"></a>3.1 调用混合宏</h4><h4 id="3-1-1-混合宏的参数：传一个不带值的参数"><a href="#3-1-1-混合宏的参数：传一个不带值的参数" class="headerlink" title="3.1.1 混合宏的参数：传一个不带值的参数"></a>3.1.1 混合宏的参数：传一个不带值的参数</h4><h4 id="3-1-2-混合宏的参数：传一个带值的参数"><a href="#3-1-2-混合宏的参数：传一个带值的参数" class="headerlink" title="3.1.2 混合宏的参数：传一个带值的参数"></a>3.1.2 混合宏的参数：传一个带值的参数</h4><h4 id="3-1-3-混合宏的参数：传多个参数"><a href="#3-1-3-混合宏的参数：传多个参数" class="headerlink" title="3.1.3 混合宏的参数：传多个参数"></a>3.1.3 混合宏的参数：传多个参数</h4><h4 id="3-1-4-混合宏的参数：混合宏的不足"><a href="#3-1-4-混合宏的参数：混合宏的不足" class="headerlink" title="3.1.4 混合宏的参数：混合宏的不足"></a>3.1.4 混合宏的参数：混合宏的不足</h4><h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3>
       
     </div>
 
@@ -435,9 +408,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/实用/" rel="tag"># 实用</a>
+            <a href="/tags/日常学习/" rel="tag"># 日常学习</a>
           
-            <a href="/tags/兴趣/" rel="tag"># 兴趣</a>
+            <a href="/tags/sass/" rel="tag"># sass</a>
           
         </div>
       
@@ -450,18 +423,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/08/响应式布局/" rel="next" title="响应式布局">
-                <i class="fa fa-chevron-left"></i> 响应式布局
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/07/test/" rel="prev" title="这是标题">
-                这是标题 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/08/sass学习一/" rel="prev" title="sass学习一（基础）">
+                sass学习一（基础） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -591,7 +560,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#工具选择"><span class="nav-number">1.</span> <span class="nav-text">工具选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Github"><span class="nav-number">1.1.</span> <span class="nav-text">Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo"><span class="nav-number">1.2.</span> <span class="nav-text">hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始搭建"><span class="nav-number">2.</span> <span class="nav-text">开始搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建blog环境"><span class="nav-number">2.0.2.</span> <span class="nav-text">建blog环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#预览博客"><span class="nav-number">2.0.3.</span> <span class="nav-text">预览博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置信息"><span class="nav-number">2.0.4.</span> <span class="nav-text">配置信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再次预览，是否成功"><span class="nav-number">2.0.5.</span> <span class="nav-text">再次预览，是否成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装主题"><span class="nav-number">2.0.6.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连接github"><span class="nav-number">2.0.7.</span> <span class="nav-text">连接github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上传hexo"><span class="nav-number">2.0.8.</span> <span class="nav-text">上传hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改GitHub端setting"><span class="nav-number">2.0.9.</span> <span class="nav-text">修改GitHub端setting</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加文章"><span class="nav-number">2.0.10.</span> <span class="nav-text">添加文章</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小tips"><span class="nav-number">2.1.</span> <span class="nav-text">小tips</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-基本特性"><span class="nav-number">1.</span> <span class="nav-text">一. 基本特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-变量"><span class="nav-number">1.1.</span> <span class="nav-text">1 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-普通变量和默认变狼"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 普通变量和默认变狼</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-变量调用"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 变量调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-全局和局部变量"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 全局和局部变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-嵌套"><span class="nav-number">1.2.</span> <span class="nav-text">2. 嵌套</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-选择器嵌套"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 选择器嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-属性嵌套"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 属性嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-伪类嵌套"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 伪类嵌套</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-混合宏"><span class="nav-number">1.3.</span> <span class="nav-text">3. 混合宏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-调用混合宏"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 调用混合宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-混合宏的参数：传一个不带值的参数"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.1.1 混合宏的参数：传一个不带值的参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-混合宏的参数：传一个带值的参数"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.1.2 混合宏的参数：传一个带值的参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-混合宏的参数：传多个参数"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.1.3 混合宏的参数：传多个参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-混合宏的参数：混合宏的不足"><span class="nav-number">1.3.5.</span> <span class="nav-text">3.1.4 混合宏的参数：混合宏的不足</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4"><span class="nav-number">1.4.</span> <span class="nav-text">4.</span></a></li></ol></li></ol></div>
             
 
           </div>

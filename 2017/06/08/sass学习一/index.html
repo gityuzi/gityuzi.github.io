@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="日常学习,网页布局," />
+  <meta name="keywords" content="日常学习,sass," />
 
 
 
@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="百度前端技术学院，小薇学院任务之响应式布局学习。">
-<meta name="keywords" content="日常学习,网页布局">
+<meta name="description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  1. 简介1.1 css预处理器css预处理器包括：sass、less、stylus等。 为CSS增加可编程性，使得更加简洁，适应性，可读性，易于维护等优点">
+<meta name="keywords" content="日常学习,sass">
 <meta property="og:type" content="article">
-<meta property="og:title" content="响应式布局">
-<meta property="og:url" content="http://yoursite.com/2017/04/08/响应式布局/index.html">
+<meta property="og:title" content="sass学习一（基础）">
+<meta property="og:url" content="http://yoursite.com/2017/06/08/sass学习一/index.html">
 <meta property="og:site_name" content="张超的博客">
-<meta property="og:description" content="百度前端技术学院，小薇学院任务之响应式布局学习。">
-<meta property="og:updated_time" content="2017-04-18T03:09:45.455Z">
+<meta property="og:description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  1. 简介1.1 css预处理器css预处理器包括：sass、less、stylus等。 为CSS增加可编程性，使得更加简洁，适应性，可读性，易于维护等优点">
+<meta property="og:updated_time" content="2017-06-07T18:04:36.210Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="响应式布局">
-<meta name="twitter:description" content="百度前端技术学院，小薇学院任务之响应式布局学习。">
+<meta name="twitter:title" content="sass学习一（基础）">
+<meta name="twitter:description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  1. 简介1.1 css预处理器css预处理器包括：sass、less、stylus等。 为CSS增加可编程性，使得更加简洁，适应性，可读性，易于维护等优点">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/08/响应式布局/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/08/sass学习一/"/>
 
 
 
 
 
-  <title> 响应式布局 | 张超的博客 </title>
+  <title> sass学习一（基础） | 张超的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +270,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/08/响应式布局/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/08/sass学习一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gityuzi">
@@ -291,7 +291,7 @@
             
             
               
-                响应式布局
+                sass学习一（基础）
               
             
           </h1>
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-08T23:42:46+08:00">
-                2017-04-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-08T01:14:43+08:00">
+                2017-06-08
               </time>
             
 
@@ -329,8 +329,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/html-css/" itemprop="url" rel="index">
-                    <span itemprop="name">html-css</span>
+                  <a href="/categories/知识点/" itemprop="url" rel="index">
+                    <span itemprop="name">知识点</span>
                   </a>
                 </span>
 
@@ -340,8 +340,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/html-css/知识点/" itemprop="url" rel="index">
-                    <span itemprop="name">知识点</span>
+                  <a href="/categories/知识点/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -376,23 +376,166 @@
 
       
         <blockquote>
-<p>百度前端技术学院，小薇学院任务之响应式布局学习。</p>
+<p>一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。</p>
 </blockquote>
+<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><h3 id="1-1-css预处理器"><a href="#1-1-css预处理器" class="headerlink" title="1.1 css预处理器"></a>1.1 css预处理器</h3><p>css预处理器包括：sass、less、stylus等。</p>
+<p>为CSS增加可编程性，使得更加简洁，适应性，可读性，易于维护等优点</p>
 <a id="more"></a>
-<h2 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h2><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="1-HTML-meta标签"><a href="#1-HTML-meta标签" class="headerlink" title="1. HTML- -meta标签"></a>1. HTML- <head>-meta标签</head></h4><pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-</code></pre><h4 id="2-CSS-media-query"><a href="#2-CSS-media-query" class="headerlink" title="2. CSS-media query"></a>2. CSS-media query</h4><pre><code>@media screen and (max-width: 980px) {
-   head { … }
-  #content { … }
-  #footer { … }
+<h3 id="1-2-sass和scss"><a href="#1-2-sass和scss" class="headerlink" title="1.2 sass和scss"></a>1.2 sass和scss</h3><p>文件后缀名不一样：.sass/.scss</p>
+<p>写法不一样：sass更为严格，不存在{}和；，scss和css的编写没有差别，可以将.css文件直接改为.scss。</p>
+<h2 id="2-语法格式及编译"><a href="#2-语法格式及编译" class="headerlink" title="2. 语法格式及编译"></a>2. 语法格式及编译</h2><h3 id="2-1-语法格式"><a href="#2-1-语法格式" class="headerlink" title="2.1 语法格式"></a>2.1 语法格式</h3><p>将同一段css代码编写</p>
+<pre><code>body {
+    font: 100% Helvetica, sans-serif;
+    color: #333;
 }
-</code></pre><p>也可以，两个条件限制。</p>
-<pre><code>@media only screen and (min-width: 768px) and (max-width: 1024px) {}
-</code></pre><h4 id="3-还有link标签引用，-importan，xml等方法。"><a href="#3-还有link标签引用，-importan，xml等方法。" class="headerlink" title="3. 还有link标签引用，@importan，xml等方法。"></a>3. 还有link标签引用，@importan，xml等方法。</h4><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
-<li>写HTML的时候class类不同情况下不同。参考bootstrap，但是可能一般的网站并不需要这么写。</li>
-<li>其实感觉还行，不是很难理解。</li>
-<li>使用百分比单位。</li>
-</ol>
+</code></pre><h4 id="2-1-1-sass"><a href="#2-1-1-sass" class="headerlink" title="2.1.1 sass"></a>2.1.1 sass</h4><pre><code>$font-stack: Helvetica, sans-serif
+$primary-color: #333
 
+body
+    font: 100% $font-stack
+    color: $primary-color
+</code></pre><h4 id="2-1-2-scss"><a href="#2-1-2-scss" class="headerlink" title="2.1.2 scss"></a>2.1.2 scss</h4><pre><code>$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+</code></pre><p><strong>sass由tab严格控制缩进，且没有{}和；的出现 ，而scss更像css代码。</strong></p>
+<h3 id="2-2-编译"><a href="#2-2-编译" class="headerlink" title="2.2 编译"></a>2.2 编译</h3><h4 id="2-2-1-编译方法"><a href="#2-2-1-编译方法" class="headerlink" title="2.2.1 编译方法"></a>2.2.1 编译方法</h4><ul>
+<li>命令编译</li>
+<li>GUI工具编译</li>
+<li>自动化编译</li>
+</ul>
+<h3 id="2-2-2-各个方法比较"><a href="#2-2-2-各个方法比较" class="headerlink" title="2.2.2 各个方法比较"></a>2.2.2 各个方法比较</h3><table>
+<thead>
+<tr>
+<th>编译名称</th>
+<th>编译方法</th>
+<th>编译优缺点</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令编译</td>
+<td><strong>单个文件</strong>：sass &lt;要编译的Sass文件路径&gt;/style.scss:&lt;要输出CSS文件路径&gt;/style.css     <strong>多文件</strong>：sass sass/:css/</td>
+<td>只能一次性编译， 开启“watch”功能，这样只要你的代码进行任保修改，都能自动监测到代码的变化，并且给你直接编译出来</td>
+<td>exp：    sass –watch &lt;要编译的Sass文件路径&gt;/style.scss:&lt;要输出CSS文件路径&gt;/style.css</td>
+</tr>
+<tr>
+<td>GUI界面工具编译</td>
+<td>1.<strong>Koala</strong> (<a href="http://koala-app.com/)2.Compass.app（http://compass.kkbox.com/）3/Scout（http://mhs.github.io/scout-app/）4.**CodeKit**（https://incident57.com/codekit/index.html）5.Prepros（https://prepros.io/）" target="_blank" rel="external">http://koala-app.com/)2.Compass.app（http://compass.kkbox.com/）3/Scout（http://mhs.github.io/scout-app/）4.**CodeKit**（https://incident57.com/codekit/index.html）5.Prepros（https://prepros.io/）</a></td>
+<td>界面操作，比较方便。</td>
+<td>无</td>
+</tr>
+<tr>
+<td>自动化编译</td>
+<td>grunt：</td>
+<td>glup</td>
+<td>代码见下</td>
+</tr>
+</tbody>
+</table>
+<p>grunt：</p>
+<pre><code>module.exports = function(grunt) {
+    grunt.initConfig({
+        pkg: grunt.file.readJSON(&apos;package.json&apos;),
+        sass: {
+            dist: {
+                files: {
+                    &apos;style/style.css&apos; : &apos;sass/style.scss&apos;
+                }
+            }
+        },
+        watch: {
+            css: {
+                files: &apos;**/*.scss&apos;,
+                tasks: [&apos;sass&apos;]
+            }
+        }
+    });
+    grunt.loadNpmTasks(&apos;grunt-contrib-sass&apos;);
+    grunt.loadNpmTasks(&apos;grunt-contrib-watch&apos;);
+    grunt.registerTask(&apos;default&apos;,[&apos;watch&apos;]);
+} 
+</code></pre><p>glup ：</p>
+<pre><code>var gulp = require(&apos;gulp&apos;);
+var sass = require(&apos;gulp-sass&apos;);
+
+gulp.task(&apos;sass&apos;, function () {
+    gulp.src(&apos;./scss/*.scss&apos;)
+        .pipe(sass())
+        .pipe(gulp.dest(&apos;./css&apos;));
+});
+
+gulp.task(&apos;watch&apos;, function() {
+    gulp.watch(&apos;scss/*.scss&apos;, [&apos;sass&apos;]);
+});
+
+gulp.task(&apos;default&apos;, [&apos;sass&apos;,&apos;watch&apos;]); 
+</code></pre><h3 id="2-2-3-常见编译错误"><a href="#2-2-3-常见编译错误" class="headerlink" title="2.2.3 常见编译错误"></a>2.2.3 常见编译错误</h3><ul>
+<li>字符：不支持GBK。需要设置为utf-8</li>
+<li>中文字符：建议文件命名用英文</li>
+</ul>
+<h3 id="2-2-4-输出方法"><a href="#2-2-4-输出方法" class="headerlink" title="2.2.4 输出方法"></a>2.2.4 输出方法</h3><ul>
+<li>嵌套输出方式 nested</li>
+<li>展开 expanded</li>
+<li>紧凑 compact</li>
+<li><p>压缩 compressed</p>
+<p>  nav {</p>
+<pre><code>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li { display: inline-block; }
+
+a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+</code></pre><p>  }</p>
+</li>
+</ul>
+<h3 id="nested-："><a href="#nested-：" class="headerlink" title="nested ："></a>nested ：</h3><pre><code>sass --watch test.scss:test.css --style nested
+</code></pre><p>编译结果:</p>
+<pre><code>nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+nav li {
+    display: inline-block; }
+nav a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none; }
+</code></pre><h3 id="expanded-："><a href="#expanded-：" class="headerlink" title="expanded ："></a>expanded ：</h3><pre><code>sass --watch test.scss:test.css --style expanded
+</code></pre><p>结果：</p>
+<pre><code>nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+}
+nav a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+</code></pre><h3 id="compacted："><a href="#compacted：" class="headerlink" title="compacted："></a>compacted：</h3><pre><code>sass --watch test.scss:test.css --style compact
+</code></pre><p>结果：</p>
+<pre><code>nav ul { margin: 0; padding: 0; list-style: none; }
+nav li { display: inline-block; }
+nav a { display: block; padding: 6px 12px; text-decoration: none; }
+</code></pre><h3 id="compressed："><a href="#compressed：" class="headerlink" title="compressed："></a>compressed：</h3><pre><code>sass --watch test.scss:test.css --style compressed
+</code></pre><p>结果：</p>
+<pre><code>nav ul{margin:0;padding:0;list-style:none}nav li{display:inline-block}nav a{display:block;padding:6px 12px;text-decoration:none}
+</code></pre>
       
     </div>
 
@@ -423,7 +566,7 @@
           
             <a href="/tags/日常学习/" rel="tag"># 日常学习</a>
           
-            <a href="/tags/网页布局/" rel="tag"># 网页布局</a>
+            <a href="/tags/sass/" rel="tag"># sass</a>
           
         </div>
       
@@ -436,8 +579,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/09/flex 伸缩布局盒模型/" rel="next" title="flex 伸缩布局盒模型">
-                <i class="fa fa-chevron-left"></i> flex 伸缩布局盒模型
+              <a href="/2017/06/08/sass学习二 /" rel="next" title="sass学习二">
+                <i class="fa fa-chevron-left"></i> sass学习二
               </a>
             
           </div>
@@ -446,8 +589,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/08/基于github和hexo搭建个人博客/" rel="prev" title="基于github和hexo搭建个人博客">
-                基于github和hexo搭建个人博客 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/07/日常/" rel="prev" title="日常学习">
+                日常学习 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -577,7 +720,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式布局"><span class="nav-number">1.</span> <span class="nav-text">响应式布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">1.1.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-HTML-meta标签"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. HTML- -meta标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-CSS-media-query"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. CSS-media query</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-还有link标签引用，-importan，xml等方法。"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 还有link标签引用，@importan，xml等方法。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">1.2.</span> <span class="nav-text">注意</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-简介"><span class="nav-number">1.</span> <span class="nav-text">1. 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-css预处理器"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 css预处理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-sass和scss"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 sass和scss</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-语法格式及编译"><span class="nav-number">2.</span> <span class="nav-text">2. 语法格式及编译</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-语法格式"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 语法格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-sass"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 sass</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-scss"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 scss</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编译"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 编译</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-编译方法"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1 编译方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-各个方法比较"><span class="nav-number">2.3.</span> <span class="nav-text">2.2.2 各个方法比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-常见编译错误"><span class="nav-number">2.4.</span> <span class="nav-text">2.2.3 常见编译错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-4-输出方法"><span class="nav-number">2.5.</span> <span class="nav-text">2.2.4 输出方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nested-："><span class="nav-number">2.6.</span> <span class="nav-text">nested ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#expanded-："><span class="nav-number">2.7.</span> <span class="nav-text">expanded ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#compacted："><span class="nav-number">2.8.</span> <span class="nav-text">compacted：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#compressed："><span class="nav-number">2.9.</span> <span class="nav-text">compressed：</span></a></li></ol></li></ol></div>
             
 
           </div>
