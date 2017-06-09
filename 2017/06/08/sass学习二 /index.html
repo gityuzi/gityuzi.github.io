@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  一. 基本特性1 变量">
+<meta name="description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  一. 基本特性1 变量exp：$width: 200px;   声明变量的符号“$” 变量名称 赋予变量的值">
 <meta name="keywords" content="日常学习,sass">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sass学习二">
 <meta property="og:url" content="http://yoursite.com/2017/06/08/sass学习二 /index.html">
 <meta property="og:site_name" content="张超的博客">
-<meta property="og:description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  一. 基本特性1 变量">
-<meta property="og:updated_time" content="2017-06-07T18:17:48.163Z">
+<meta property="og:description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  一. 基本特性1 变量exp：$width: 200px;   声明变量的符号“$” 变量名称 赋予变量的值">
+<meta property="og:updated_time" content="2017-06-09T04:15:34.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sass学习二">
-<meta name="twitter:description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  一. 基本特性1 变量">
+<meta name="twitter:description" content="一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。  一. 基本特性1 变量exp：$width: 200px;   声明变量的符号“$” 变量名称 赋予变量的值">
 
 
 
@@ -378,8 +378,267 @@
         <blockquote>
 <p>一直想学习的sass和less，了解过后选择了sass。此篇就是简单的sass入门笔记。</p>
 </blockquote>
-<h2 id="一-基本特性"><a href="#一-基本特性" class="headerlink" title="一. 基本特性"></a>一. 基本特性</h2><h3 id="1-变量"><a href="#1-变量" class="headerlink" title="1 变量"></a>1 变量</h3><a id="more"></a>
-<h4 id="1-1-普通变量和默认变狼"><a href="#1-1-普通变量和默认变狼" class="headerlink" title="1.1 普通变量和默认变狼"></a>1.1 普通变量和默认变狼</h4><h4 id="1-2-变量调用"><a href="#1-2-变量调用" class="headerlink" title="1.2 变量调用"></a>1.2 变量调用</h4><h4 id="1-3-全局和局部变量"><a href="#1-3-全局和局部变量" class="headerlink" title="1.3 全局和局部变量"></a>1.3 全局和局部变量</h4><h3 id="2-嵌套"><a href="#2-嵌套" class="headerlink" title="2. 嵌套"></a>2. 嵌套</h3><h4 id="2-1-选择器嵌套"><a href="#2-1-选择器嵌套" class="headerlink" title="2.1 选择器嵌套"></a>2.1 选择器嵌套</h4><h4 id="2-2-属性嵌套"><a href="#2-2-属性嵌套" class="headerlink" title="2.2 属性嵌套"></a>2.2 属性嵌套</h4><h4 id="2-3-伪类嵌套"><a href="#2-3-伪类嵌套" class="headerlink" title="2.3 伪类嵌套"></a>2.3 伪类嵌套</h4><h3 id="3-混合宏"><a href="#3-混合宏" class="headerlink" title="3. 混合宏"></a>3. 混合宏</h3><h4 id="3-1-调用混合宏"><a href="#3-1-调用混合宏" class="headerlink" title="3.1 调用混合宏"></a>3.1 调用混合宏</h4><h4 id="3-1-1-混合宏的参数：传一个不带值的参数"><a href="#3-1-1-混合宏的参数：传一个不带值的参数" class="headerlink" title="3.1.1 混合宏的参数：传一个不带值的参数"></a>3.1.1 混合宏的参数：传一个不带值的参数</h4><h4 id="3-1-2-混合宏的参数：传一个带值的参数"><a href="#3-1-2-混合宏的参数：传一个带值的参数" class="headerlink" title="3.1.2 混合宏的参数：传一个带值的参数"></a>3.1.2 混合宏的参数：传一个带值的参数</h4><h4 id="3-1-3-混合宏的参数：传多个参数"><a href="#3-1-3-混合宏的参数：传多个参数" class="headerlink" title="3.1.3 混合宏的参数：传多个参数"></a>3.1.3 混合宏的参数：传多个参数</h4><h4 id="3-1-4-混合宏的参数：混合宏的不足"><a href="#3-1-4-混合宏的参数：混合宏的不足" class="headerlink" title="3.1.4 混合宏的参数：混合宏的不足"></a>3.1.4 混合宏的参数：混合宏的不足</h4><h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3>
+<h2 id="一-基本特性"><a href="#一-基本特性" class="headerlink" title="一. 基本特性"></a>一. 基本特性</h2><h3 id="1-变量"><a href="#1-变量" class="headerlink" title="1 变量"></a>1 变量</h3><p>exp：$width: 200px; </p>
+<ol>
+<li>声明变量的符号“$”</li>
+<li>变量名称</li>
+<li>赋予变量的值    </li>
+</ol>
+<a id="more"></a>
+<h4 id="1-1-普通变量和默认变量"><a href="#1-1-普通变量和默认变量" class="headerlink" title="1.1 普通变量和默认变量"></a>1.1 普通变量和默认变量</h4><p>sass 的默认变量一般是用来设置默认值，然后根据需求来覆盖的，覆盖的方式也很简单，只需要在默认变量之前重新声明下变量即可。</p>
+<pre><code>$baseLineHeight: 2;
+$baseLineHeight: 1.5 !default;
+body{
+    line-height: $baseLineHeight; 
+}
+
+body{
+    line-height:2;
+}
+</code></pre><h4 id="1-2-变量调用"><a href="#1-2-变量调用" class="headerlink" title="1.2 变量调用"></a>1.2 变量调用</h4><h4 id="1-3-全局和局部变量"><a href="#1-3-全局和局部变量" class="headerlink" title="1.3 全局和局部变量"></a>1.3 全局和局部变量</h4><p>局部变量是定义在元素内部的变量。在元素内部定义的变量不会影响其他元素。<br>全局变量就是定义在元素外面的变量</p>
+<p>除此之外，Sass 现在还提供一个 !global 参数。!global 和 !default 对于定义变量都是很有帮助的。</p>
+<p>当在局部范围（选择器内、函数内、混合宏内…）声明一个已经存在于全局范围内的变量时，局部变量就成为了全局变量的影子。基本上，局部变量只会在局部范围内覆盖全局变量。</p>
+<h5 id="什么时候声明变量？"><a href="#什么时候声明变量？" class="headerlink" title="什么时候声明变量？"></a>什么时候声明变量？</h5><p>创建变量只适用于感觉确有必要的情况下。不要为了某些骇客行为而声明新变量，这丝毫没有作用。只有满足所有下述标准时方可创建新变量：</p>
+<ul>
+<li>该值至少重复出现了两次；</li>
+<li>该值至少可能会被更新一次；</li>
+<li>该值所有的表现都与变量有关（非巧合）。</li>
+</ul>
+<p>基本上，没有理由声明一个永远不需要更新或者只在单一地方使用变量。</p>
+<h3 id="2-嵌套"><a href="#2-嵌套" class="headerlink" title="2. 嵌套"></a>2. 嵌套</h3><ul>
+<li>选择器嵌套最大的问题是将使最终的代码难以阅读。开发者需要花费巨大精力计算不同缩进级别下的选择器具体的表现效果。</li>
+<li><p>选择器越具体则声明语句越冗长，而且对最近选择器的引用(&amp;)也越频繁。在某些时候，出现混淆选择器路径和探索下一级选择器的错误率很高，这非常不值得。<br><strong>为了防止此类情况，我们应该尽可能避免选择器嵌套。</strong></p>
+<h4 id="2-1-选择器嵌套"><a href="#2-1-选择器嵌套" class="headerlink" title="2.1 选择器嵌套"></a>2.1 选择器嵌套</h4><p>  nav a {</p>
+<pre><code>color:red;
+</code></pre><p>  }</p>
+<p>  header nav a {</p>
+<pre><code>color:green;
+</code></pre><p>  }</p>
+<p>  nav {</p>
+<pre><code>a {
+    color: red;
+
+    header &amp; {
+        color:green;
+    }
+}  
+</code></pre><p>  }</p>
+</li>
+</ul>
+<h4 id="2-2-属性嵌套"><a href="#2-2-属性嵌套" class="headerlink" title="2.2 属性嵌套"></a>2.2 属性嵌套</h4><pre><code>.box {
+    border-top: 1px solid red;
+    border-bottom: 1px solid green;
+}
+
+.box {
+    border: {
+        top: 1px solid red;
+        bottom: 1px solid green;
+    }
+}
+</code></pre><h4 id="2-3-伪类嵌套"><a href="#2-3-伪类嵌套" class="headerlink" title="2.3 伪类嵌套"></a>2.3 伪类嵌套</h4><pre><code>.clearfix{
+&amp;:before,
+&amp;:after {
+    content:&quot;&quot;;
+    display: table;
+  }
+&amp;:after {
+    clear:both;
+    overflow: hidden;
+  }
+}
+
+clearfix:before, .clearfix:after {
+    content: &quot;&quot;;
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+    overflow: hidden;
+}
+</code></pre><h3 id="3-混合宏"><a href="#3-混合宏" class="headerlink" title="3. 混合宏"></a>3. 混合宏</h3><p>在 Sass 中，使用“@mixin”来声明一个混合宏</p>
+<h4 id="3-1-调用混合宏"><a href="#3-1-调用混合宏" class="headerlink" title="3.1 调用混合宏"></a>3.1 调用混合宏</h4><p>@include”来调用声明好的混合宏</p>
+<pre><code>@mixin border-radius{
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+button {
+    @include border-radius;
+}
+
+button {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+</code></pre><h4 id="3-1-1-混合宏的参数：传一个不带值的参数"><a href="#3-1-1-混合宏的参数：传一个不带值的参数" class="headerlink" title="3.1.1 混合宏的参数：传一个不带值的参数"></a>3.1.1 混合宏的参数：传一个不带值的参数</h4><pre><code>@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.box {
+    @include border-radius(3px);
+}
+
+.box {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+</code></pre><h4 id="3-1-2-混合宏的参数：传一个带值的参数"><a href="#3-1-2-混合宏的参数：传一个带值的参数" class="headerlink" title="3.1.2 混合宏的参数：传一个带值的参数"></a>3.1.2 混合宏的参数：传一个带值的参数</h4><pre><code>@mixin border-radius($radius:3px){
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.btn {
+     @include border-radius;
+}
+
+.btn {
+    -webkit-border-radius: 3px;
+     border-radius: 3px;
+}
+</code></pre><p>但有的时候，页面中有些元素的圆角值不一样，那么可以随机给混合宏传值，如：</p>
+<pre><code>.box {
+    @include border-radius(50%);
+}
+
+.box {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+</code></pre><h4 id="3-1-3-混合宏的参数：传多个参数"><a href="#3-1-3-混合宏的参数：传多个参数" class="headerlink" title="3.1.3 混合宏的参数：传多个参数"></a>3.1.3 混合宏的参数：传多个参数</h4><pre><code>@mixin center($width,$height){
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -($height) / 2;
+    margin-left: -($width) / 2;
+}
+
+.box-center {
+    @include center(500px,300px);
+}
+
+.box-center {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -250px;
+}
+</code></pre><p><strong>有一个特别的参数“…”。当混合宏传的参数过多之时，可以使用参数来替代</strong></p>
+<h4 id="3-1-4-混合宏的参数：混合宏的不足"><a href="#3-1-4-混合宏的参数：混合宏的不足" class="headerlink" title="3.1.4 混合宏的参数：混合宏的不足"></a>3.1.4 混合宏的参数：混合宏的不足</h4><p>复用重复代码块。但其最大的不足之处是会生成冗余的代码块。不能智能的将相同的样式代码块合并在一起。</p>
+<h3 id="4-扩展继承-extend"><a href="#4-扩展继承-extend" class="headerlink" title="4. 扩展继承 @extend"></a>4. 扩展继承 @extend</h3><pre><code>//SCSS
+.btn {
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #f36;
+    color: #fff;
+    @extend .btn;
+}
+
+.btn-second {
+    background-color: orange;
+    color: #fff;
+    @extend .btn;
+}
+</code></pre><p>编译出来之后：</p>
+<pre><code>//CSS
+.btn, .btn-primary, .btn-second {
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #f36;
+    color: #fff;
+}
+
+.btn-second {
+    background-clor: orange;
+    color: #fff;
+}
+</code></pre><h3 id="4-1-占位符"><a href="#4-1-占位符" class="headerlink" title="4.1 占位符%"></a>4.1 占位符%</h3><pre><code>%mt5 {
+    margin-top: 5px;
+}
+%pt5{
+    padding-top: 5px;
+}
+</code></pre><p>没有被 @extend 调用，他并没有产生任何代码块，只是静静的躺在你的某个 SCSS 文件中。只有通过 @extend 调用才会产生代码：</p>
+<pre><code>//SCSS
+%mt5 {
+    margin-top: 5px;
+}
+%pt5{
+    padding-top: 5px;
+}
+
+.btn {
+    @extend %mt5;
+    @extend %pt5;
+}
+
+.block {
+    @extend %mt5;
+
+    span {
+        @extend %pt5;
+    }
+}
+</code></pre><p>编译出来的CSS</p>
+<pre><code>//CSS
+.btn, .block {
+    margin-top: 5px;
+}
+
+.btn, .block span {
+    padding-top: 5px;
+}
+</code></pre><h3 id="5-混合宏、继承、占位符"><a href="#5-混合宏、继承、占位符" class="headerlink" title="5. 混合宏、继承、占位符"></a>5. 混合宏、继承、占位符</h3><ul>
+<li><p>如果你的代码块中涉及到变量，建议使用混合宏来创建相同的代码块。</p>
+</li>
+<li><p>如果你的代码块不需要专任何变量参数，而且有一个基类已在文件中存在，那么建议使用 Sass 的继承。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>混合宏</th>
+<th>继承</th>
+<th>占位符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>声明方式</td>
+<td>@mixin</td>
+<td>.class</td>
+<td>%placedolder</td>
+</tr>
+<tr>
+<td>调用方式</td>
+<td>@include</td>
+<td>@extend</td>
+<td>@extend</td>
+</tr>
+<tr>
+<td>使用环境</td>
+<td>如果代码块相同代码要在不同环境下传递不同的值时，混合宏。<strong>不足</strong>：编译出来的CSS出现多次调用的混合宏对应的代码块，文件臃肿，代码冗余。</td>
+<td>如果相同的代码块不需要传递不同的值，并且代码块已在scss中定义，可以通过继承来调用已存在的基类。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
 
@@ -560,7 +819,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-基本特性"><span class="nav-number">1.</span> <span class="nav-text">一. 基本特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-变量"><span class="nav-number">1.1.</span> <span class="nav-text">1 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-普通变量和默认变狼"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 普通变量和默认变狼</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-变量调用"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 变量调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-全局和局部变量"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 全局和局部变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-嵌套"><span class="nav-number">1.2.</span> <span class="nav-text">2. 嵌套</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-选择器嵌套"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 选择器嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-属性嵌套"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 属性嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-伪类嵌套"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 伪类嵌套</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-混合宏"><span class="nav-number">1.3.</span> <span class="nav-text">3. 混合宏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-调用混合宏"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 调用混合宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-混合宏的参数：传一个不带值的参数"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.1.1 混合宏的参数：传一个不带值的参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-混合宏的参数：传一个带值的参数"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.1.2 混合宏的参数：传一个带值的参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-混合宏的参数：传多个参数"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.1.3 混合宏的参数：传多个参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-混合宏的参数：混合宏的不足"><span class="nav-number">1.3.5.</span> <span class="nav-text">3.1.4 混合宏的参数：混合宏的不足</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4"><span class="nav-number">1.4.</span> <span class="nav-text">4.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-基本特性"><span class="nav-number">1.</span> <span class="nav-text">一. 基本特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-变量"><span class="nav-number">1.1.</span> <span class="nav-text">1 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-普通变量和默认变量"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 普通变量和默认变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-变量调用"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 变量调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-全局和局部变量"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 全局和局部变量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么时候声明变量？"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">什么时候声明变量？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-嵌套"><span class="nav-number">1.2.</span> <span class="nav-text">2. 嵌套</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-选择器嵌套"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 选择器嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-属性嵌套"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 属性嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-伪类嵌套"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 伪类嵌套</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-混合宏"><span class="nav-number">1.3.</span> <span class="nav-text">3. 混合宏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-调用混合宏"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 调用混合宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-混合宏的参数：传一个不带值的参数"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.1.1 混合宏的参数：传一个不带值的参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-混合宏的参数：传一个带值的参数"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.1.2 混合宏的参数：传一个带值的参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-混合宏的参数：传多个参数"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.1.3 混合宏的参数：传多个参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-混合宏的参数：混合宏的不足"><span class="nav-number">1.3.5.</span> <span class="nav-text">3.1.4 混合宏的参数：混合宏的不足</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-扩展继承-extend"><span class="nav-number">1.4.</span> <span class="nav-text">4. 扩展继承 @extend</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-占位符"><span class="nav-number">1.5.</span> <span class="nav-text">4.1 占位符%</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-混合宏、继承、占位符"><span class="nav-number">1.6.</span> <span class="nav-text">5. 混合宏、继承、占位符</span></a></li></ol></li></ol></div>
             
 
           </div>
